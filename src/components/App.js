@@ -1,11 +1,12 @@
 import React from 'react'
 import WordGame from './WordGame/WordGame'
+import SimpleInput from './input/SimpleInput'
 
 function App() {
   return (
-    <main className="App">
-        <WordGame />
-    </main>
+    <>
+        <SimpleInput />
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from "react"
 import useWordGame from "../../hooks/useWordGame"
-import './WordGame.css'
+import classes from './WordGame.module.css'
+
 
 function WordGame() {
     const {
@@ -14,9 +15,10 @@ function WordGame() {
     } = useWordGame(10)
     
     return (
-        <div>
-            <h1>How fast do you type?</h1>
+        <div className={classes.body} >
+            <h1 className={classes.title}>How fast do you type?</h1>
             <textarea
+                className={classes.textarea}
                 ref={textBoxRef}
                 onChange={handleChange}
                 value={text}

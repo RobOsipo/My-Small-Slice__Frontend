@@ -1,18 +1,19 @@
-html, body {
+:root {
+    /* background-color: black; */
+}
+
+.body {
     background: black;
     color: #00b800;
     margin:0;
     padding: 0;
-    padding-top: 10px;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
-}
-
-body {
     font-weight: 400;
+    height: 100vh;
 }
 
-button {
+.button {
     font-family: 'Press Start 2P', cursive;
     display: block;
     margin: 0 auto;
@@ -23,16 +24,16 @@ button {
     text-transform: uppercase;
 }
 
-button:disabled {
+.button:disabled {
     cursor: not-allowed;
 }
 
-h1 {
+.title {
     font-size: 20px;
     text-align:center;
 }
 
-textarea {
+.textarea {
     font-family: 'Press Start 2P', cursive;
     border: 3px solid black;
     width: 90%;
@@ -43,6 +44,6 @@ textarea {
     padding: 10px;
 }
 
-textarea:disabled {
+.textarea:disabled {
     background-color: #a5a2a2;
 }
