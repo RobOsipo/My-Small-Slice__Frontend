@@ -1,5 +1,6 @@
 import useInput from '../../hooks/useInput'
 import classes from './SimpleInput.module.css'
+import Smiley from '../../icons/Smiley'
 const SimpleInput = (props) => {
 
    const {
@@ -53,6 +54,7 @@ const SimpleInput = (props) => {
 
   return (
     <form onSubmit={formSubmissionHandler} className={classes.form}>
+      <h1>Please Log In To Continue <span><Smiley /></span></h1>
       <div className={nameInputClasses}>
         <label htmlFor='name'>Your Name</label>
         <input

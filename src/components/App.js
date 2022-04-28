@@ -6,13 +6,13 @@ import Welcome from '../pages/Welcome/Welcome'
 import SearchForImages from '../pages/SearchForImages/SearchForImages'
 import Notes from '../pages/Notes/Notes'
 import PlayAGame from '../pages/PlayAGame/PlayAGame'
-import Logostache from '../icons/Logostache'
+
 
 function App() {
   return (
     <>
-        <SimpleInput />
-        <Logostache />
+    
+        
         <Switch>
           <Route exact path="/">
               <Welcome /> 
