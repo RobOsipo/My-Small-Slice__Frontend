@@ -1,0 +1,12 @@
+
+
+.main-container {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 100vw;
+}
+
+.input-container {
+    justify-self: center;
+    align-self: center;
+}
