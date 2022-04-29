@@ -2,8 +2,9 @@
 
 
 .main-container {
-    height: 100vh;
-    background-image: linear-gradient(
+    height: 200vh;
+    background-color: rgb(89, 88, 88);
+    /* background-image: linear-gradient(
         45deg,
         hsl(169deg 11% 19%) 0%,
         hsl(185deg 19% 22%) 9%,
@@ -17,13 +18,14 @@
         hsl(194deg 34% 34%) 82%,
         hsl(195deg 27% 30%) 91%,
         hsl(196deg 18% 25%) 100%
-      );
+      ); */
 }
 .title {
     font-size: 1.5rem;
     color: var(--bg-white)
 }
 .game-container {
+   
     height: 81vh;
     display: flex;
     flex-direction: column;

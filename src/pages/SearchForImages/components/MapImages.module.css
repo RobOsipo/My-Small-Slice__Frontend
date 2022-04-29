@@ -5,3 +5,7 @@
     max-height: 500px;
     box-shadow: var(--shadow-elevation-medium)
 }
+
+.loading {
+    text-align: center;
+}

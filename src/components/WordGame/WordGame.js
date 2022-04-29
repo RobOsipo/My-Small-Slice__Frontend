@@ -26,6 +26,7 @@ function WordGame() {
             />
             <h4>Time remaining: {timeRemaining}</h4>
             <button 
+                className={classes.button}
                 onClick={startGame}
                 disabled={isTimeRunning}
             >

@@ -1,8 +1,7 @@
-:root {
-    /* background-color: black; */
-}
+
 
 .body {
+    box-shadow: var(--dark-shadow-elevation-medium);
     background: black;
     color: #00b800;
     margin:0;
@@ -23,6 +22,7 @@
     background: #00b800;
     padding: 10px 20px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .button:disabled {

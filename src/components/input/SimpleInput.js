@@ -83,7 +83,7 @@ const SimpleInput = (props) => {
         )}
       </div>
       <div className={classes['form-control']}>
-        <button id={classes.button} className={classes.button} disabled={!formIsValid}><Link className={classes.link} to={props.linkTo}>{props.buttonText}</Link></button>
+      <Link className={classes.link} to={props.linkTo}><button id={classes.button} className={classes.button} disabled={!formIsValid}>{props.buttonText}</button></Link>
       </div>
     </form>
   );
