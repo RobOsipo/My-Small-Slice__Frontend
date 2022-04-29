@@ -55,7 +55,7 @@ const SimpleInput = (props) => {
 
   return (
     <form onSubmit={formSubmissionHandler} className={classes.form}>
-      <h1>Please {props.buttonText} To Continue</h1>
+      <h1 className={classes.title}>Please {props.buttonText} To Continue</h1>
       <div className={nameInputClasses}>
         <label htmlFor='name'>Your Name</label>
         <input
@@ -83,7 +83,7 @@ const SimpleInput = (props) => {
         )}
       </div>
       <div className={classes['form-control']}>
-        <button className={classes.button} disabled={!formIsValid}><Link to={props.linkTo}>{props.buttonText}</Link></button>
+        <button id={classes.button} className={classes.button} disabled={!formIsValid}><Link className={classes.link} to={props.linkTo}>{props.buttonText}</Link></button>
       </div>
     </form>
   );

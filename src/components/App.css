@@ -7,6 +7,8 @@
     --btn-bg-color-top: rgba(23, 1, 143, 0.8);
     --btn-bg-color-btm: rgb(0, 12, 240, 0.8);
 
+    --txt-shadow-light: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+
     --shadow-color: 286deg 36% 56%;
   --shadow-elevation-low:
     0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),

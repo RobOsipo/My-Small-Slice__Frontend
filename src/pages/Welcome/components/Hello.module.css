@@ -3,16 +3,26 @@
     --font-color-reg: #fff;
 }
 
+.title {
+    text-shadow: var(--txt-shadow-light);
+}
 
 .hello-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 50rem;
     /* border: red solid 1px; */
     color: var(--font-color-reg);
 }
+.display {
+    display: block;
+}
+.display > h1 {
+   text-align: center;
+}
+
 
 .pop-in {
     display: inline-block;
@@ -24,27 +34,28 @@
         transform: scale(0.8);
     }
     25% {
-        transform: scale(1.2);
+        transform: scale(1.8);
        
     }
     50% {
       /* transform: rotate(360deg); */
-      transform: scale(1.1);
+      transform: scale(2.8);
     
     }
     75% {
-        transform: scale(1)
+        transform: scale(1.8)
         
     }
-    90% {
-        transform: scale(1.05)
-    }
+    /* 90% {
+        transform: scale(1.0)
+    } */
     100% {
       /* transform: rotate(0deg); */
       transform: scale(1.0);
      
     }
   }
+ 
 
   .fade-in {
       display: flex;

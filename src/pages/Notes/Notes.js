@@ -2,7 +2,9 @@ import React from 'react'
 
 const Notes = () => {
   return (
-    <div>Notes</div>
+    <section>
+        <h1>Take A Note, Take A Load Off</h1>
+    </section>
   )
 }
 
