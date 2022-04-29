@@ -11,14 +11,8 @@ const Header = () => {
   return (
     <header className={classes.header}>
         <Logostache width={70} height={70} />
-        <h1 className={classes.title}><span className={classes['my-small-slice']}>My-Small-Slice </span><span className={classes.choices}> Notes <NotesIcon /> Photos <PhotosIcon /> Mini-Games <GamesIcon /> </span></h1>
-        {/* <nav>
-            <ul className={classes['link-container']}>
-                <li>My Notes </li>
-                <li>Search Photos </li>
-                <li>Play mini-games</li>
-            </ul>
-        </nav> */}
+        <h1 className={classes.title}> <span className={classes['my-small-slice']}>My-Small-Slice </span><span className={classes.choices}> <Link className={classes.link}  to="/notes"> Notes <NotesIcon /> </Link>  <Link className={classes.link} to="/search-for-images">Photos <PhotosIcon /> </Link> <Link className={classes.link} to="/play-a-game"> Mini-Games <GamesIcon /> </Link> </span></h1>
+        
     </header>
   )
 }

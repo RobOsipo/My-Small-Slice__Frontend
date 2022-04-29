@@ -8,6 +8,7 @@ import Notes from '../pages/Notes/Notes'
 import PlayAGame from '../pages/PlayAGame/PlayAGame'
 import Login from '../pages/Login/Login'
 import Choose from '../pages/Choose/Choose'
+import './App.css'
 
 
 function App() {

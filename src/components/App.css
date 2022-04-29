@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+
+:root {
+    --font-color-reg: #fff;
+    --bg-white: rgba(235, 234, 234, 0.9);
+    --shadow-color: 209deg 49% 30%;
+  --shadow-elevation-low:
+    1.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.84),
+    0.4px 0.8px 0.8px -2px hsl(var(--shadow-color) / 0.63),
+    1.3px 2.5px 2.5px -4.1px hsl(var(--shadow-color) / 0.41);
+  --shadow-elevation-medium:
+    2.3px 2.5px 0.5px hsl(var(--shadow-color) / 0.71),
+    2.5px 1px 1px -1px hsl(var(--shadow-color) / 0.6),
+    1.2px 2.4px 2.4px -2px hsl(var(--shadow-color) / 0.49),
+    2.9px 5.9px 5.9px -3px hsl(var(--shadow-color) / 0.38),
+    6.3px 12.5px 12.5px -4.1px hsl(var(--shadow-color) / 0.27);
+  --shadow-elevation-high:
+    3.3px 2.5px 0.5px hsl(var(--shadow-color) / 0.73),
+    3.9px 1.8px 1.8px -0.5px hsl(var(--shadow-color) / 0.67),
+    1.8px 3.7px 3.7px -1px hsl(var(--shadow-color) / 0.61),
+    3.5px 6.9px 6.9px -1.5px hsl(var(--shadow-color) / 0.54),
+    6.2px 12.5px 12.5px -2px hsl(var(--shadow-color) / 0.48),
+    15.6px 21.2px 21.2px -2.5px hsl(var(--shadow-color) / 0.42),
+    17px 33.9px 33.8px -3px hsl(var(--shadow-color) / 0.36),
+    25.8px 51.6px 51.5px -3.5px hsl(var(--shadow-color) / 0.3),
+    37.5px 75px 74.8px -4.1px hsl(var(--shadow-color) / 0.23);
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #3f3f3f;
+  background-image: linear-gradient(
+  40deg,
+  hsl(240deg 100% 20%) 0%,
+  hsl(230deg 57% 33%) 10%,
+  hsl(214deg 52% 42%) 20%,
+  hsl(199deg 54% 49%) 29%,
+  hsl(188deg 73% 54%) 39%,
+  hsl(180deg 100% 50%) 49%,
+  hsl(180deg 76% 63%) 58%,
+  hsl(179deg 51% 64%) 69%,
+  hsl(179deg 29% 63%) 79%,
+  hsl(178deg 11% 61%) 89%,
+  hsl(0deg 2% 57%) 100%
+);
+}
