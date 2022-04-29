@@ -1,5 +1,20 @@
 
-
+.main-container {
+    background-image: linear-gradient(
+        40deg,
+        hsl(240deg 100% 20%) 0%,
+        hsl(230deg 57% 33%) 10%,
+        hsl(214deg 52% 42%) 20%,
+        hsl(199deg 54% 49%) 29%,
+        hsl(188deg 73% 54%) 39%,
+        hsl(180deg 100% 50%) 49%,
+        hsl(180deg 76% 63%) 58%,
+        hsl(179deg 51% 64%) 69%,
+        hsl(179deg 29% 63%) 79%,
+        hsl(178deg 11% 61%) 89%,
+        hsl(0deg 2% 57%) 100%
+      );
+}
 .choice-container {
     display: flex;
     flex-direction: row;

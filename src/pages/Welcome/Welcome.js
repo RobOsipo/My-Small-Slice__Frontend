@@ -5,11 +5,27 @@ import Hello from './components/Hello'
 import classes from './Welcome.module.css'
 const Welcome = () => {
   return (
-    <main className={classes['main-container']}>
-        <Hello />
-        <SimpleInput buttonText="Register" linkTo="/login" />
-        
-    </main>
+      <div className={classes.area}>
+
+            <ul class={classes.circles}>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                        </ul>
+
+        <main className={`${classes['main-container']}`}>
+            <Hello />
+            <SimpleInput buttonText="Register" linkTo="/login" />
+            
+        </main>
+      </div>
   )
 }
 
