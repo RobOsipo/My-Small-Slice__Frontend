@@ -3,7 +3,7 @@
 
 :root {
     --font-color-reg: #fff;
-    --bg-white: rgba(235, 234, 234, 0.9);
+    --bg-white: rgba(235, 234, 234, 1);
     --btn-bg-color-top: #240370;
     --btn-bg-color-btm: rgba(21, 28, 165, 0.8);
 
@@ -28,6 +28,14 @@
     11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
     17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
     25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+
+
+    --dark-shadow-color: 0deg 0% 9%;
+    --dark-shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--dark-shadow-color) / 0.34),
+    1.1px 2.2px 3.1px -0.6px hsl(var(--dark-shadow-color) / 0.43),
+    2.6px 5.2px 7.2px -1.1px hsl(var(--dark-shadow-color) / 0.51),
+    6px 12px 16.7px -1.7px hsl(var(--dark-shadow-color) / 0.59);
 }
 * {
   box-sizing: border-box;
