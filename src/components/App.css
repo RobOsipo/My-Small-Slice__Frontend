@@ -4,8 +4,8 @@
 :root {
     --font-color-reg: #fff;
     --bg-white: rgba(235, 234, 234, 0.9);
-    --btn-bg-color-top: rgba(23, 1, 143, 0.8);
-    --btn-bg-color-btm: rgb(0, 12, 240, 0.8);
+    --btn-bg-color-top: #240370;
+    --btn-bg-color-btm: rgba(21, 28, 165, 0.8);
 
     --txt-shadow-light: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
 
