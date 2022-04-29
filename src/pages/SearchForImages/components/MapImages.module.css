@@ -1,0 +1,7 @@
+
+
+.images {
+    max-width: 500px;
+    max-height: 500px;
+    box-shadow: var(--shadow-elevation-medium)
+}

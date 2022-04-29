@@ -11,11 +11,11 @@ const PlayAGame = () => {
   }
 
   return (
-    <section>
+    <section className={classes['main-container']}>
     <Header />
     
       <section className={classes['game-container']}>
-        <h1>A List of Mini-Games Coded from Scratch For Your Entertainment</h1>
+        <h1 className={classes.title}>A List of Mini-Games Coded from Scratch For Your Entertainment</h1>
         <button onClick={toggleSpeedTypeGame} className={classes.pushable}><span className={classes.front}>{!speedType ? 'Play' : 'Stop'} The Speed Typing Game</span></button>
         {speedType && <WordGame />}
       </section>

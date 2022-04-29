@@ -45,6 +45,10 @@
       bounce alternate infinite
       cubic-bezier(.2, .65, .6, 1);
   }
+  .box:hover {
+      background-color: black;
+      color: var(--bg-white)
+  }
   .box.one {
     --bounce-offset: -20px;
     animation-duration: 500ms;
@@ -58,7 +62,7 @@
     animation-duration: 800ms;
   }
 
-  
+
 .link {
     text-decoration: none;
     color: black;
