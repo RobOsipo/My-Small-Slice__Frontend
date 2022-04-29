@@ -1,11 +1,13 @@
 import React from 'react'
 import Card from '../Card/Card'
+import classes from './SingleNote.module.css'
 
-const SingleNote = ({ title, content }) => {
+const SingleNote = ({ title, content, deleteNote, id }) => {
   return (
     <Card>
         <h1>{title}</h1>
         <p>{content}</p>
+        <button className={classes.button} onClick={() => deleteNote(id)}>Delete</button>
     </Card>
   )
 }

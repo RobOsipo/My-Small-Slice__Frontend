@@ -22,7 +22,7 @@ function CreateArea({ note, handleChange, submitNote}) {
               rows="3"
               
             />
-            <button onClick={submitNote}>Add</button>
+            <button className={classes.button} onClick={submitNote}>Add</button>
           </form>
         </div>
       );

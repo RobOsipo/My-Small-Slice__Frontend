@@ -19,6 +19,14 @@ const Notes = () => {
       });
     }
 
+    function deleteNote(id) {
+        setNotes(prevNotes => {
+          return prevNotes.filter((noteItem, index) => {
+            return index !== id;
+          });
+        });
+      }
+
     const handleChange = (event) => {
         const { name, value } = event.target;
     
@@ -42,7 +50,7 @@ const Notes = () => {
 
       const renderNotes = notes.map((note, index) => {
           return (
-              <SingleNote title={note.title} content={note.content} key={index} />
+              <SingleNote id={index} deleteNote={deleteNote} title={note.title} content={note.content} key={index} />
           )
       })
 
@@ -52,7 +60,7 @@ const Notes = () => {
       <>
         <Header />
         <section className={classes['main-container']}>
-            <h1 className={classes.title}>Take A Note, Take A Load Off</h1>
+            <h1 className={classes.title}>My Notes</h1>
                 <CreateArea note={note} handleChange={handleChange} submitNote={submitNote} />
            
         </section>

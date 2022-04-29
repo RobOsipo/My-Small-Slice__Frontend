@@ -7,13 +7,18 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(89, 88, 88);
+    background-color: #e5e5f7;
+/* opacity: 0.8; */
+background-size: 20px 20px;
+background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
+   
 }
 
 .title {
     color: var(--bg-white);
-    text-shadow: var(--txt-shadow-light);
-    -webkit-text-stroke: 0.3px black; 
-    font-size: 2rem;
+    /* text-shadow: var(--txt-shadow-light); */
+    -webkit-text-stroke: 0.7px black; 
+    font-size: 3rem;
 
 }
 
@@ -24,5 +29,8 @@
     gap: 2rem;
     padding: 2rem;
     background-color: rgb(89, 88, 88);
+    background-color: #e5e5f7;
+    background-size: 20px 20px;
+    background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
 
 }
