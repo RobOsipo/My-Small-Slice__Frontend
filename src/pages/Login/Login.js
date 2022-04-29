@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <main className={classes['main-container']}>
         
-     <div className={classes['input-container']}>   <SimpleInput buttonText="Login" /> </div>
+     <div className={classes['input-container']}>   <SimpleInput buttonText="Login" linkTo="/choose" /> </div>
         
     </main>
   )

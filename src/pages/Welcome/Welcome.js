@@ -7,7 +7,7 @@ const Welcome = () => {
   return (
     <main className={classes['main-container']}>
         <Hello />
-        <SimpleInput buttonText="Register" />
+        <SimpleInput buttonText="Register" linkTo="/login" />
         
     </main>
   )

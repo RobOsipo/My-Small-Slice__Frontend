@@ -1,6 +1,7 @@
 import useInput from '../../hooks/useInput'
 import classes from './SimpleInput.module.css'
 import Smiley from '../../icons/Smiley'
+import { Link } from 'react-router-dom'
 const SimpleInput = (props) => {
 
    const {
@@ -82,7 +83,7 @@ const SimpleInput = (props) => {
         )}
       </div>
       <div className={classes['form-control']}>
-        <button className={classes.button} disabled={!formIsValid}>{props.buttonText}</button>
+        <button className={classes.button} disabled={!formIsValid}><Link to={props.linkTo}>{props.buttonText}</Link></button>
       </div>
     </form>
   );

@@ -7,6 +7,7 @@ import SearchForImages from '../pages/SearchForImages/SearchForImages'
 import Notes from '../pages/Notes/Notes'
 import PlayAGame from '../pages/PlayAGame/PlayAGame'
 import Login from '../pages/Login/Login'
+import Choose from '../pages/Choose/Choose'
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/login">
               <Login />
+          </Route>
+          <Route path="/choose">
+            <Choose />
           </Route>
           <Route path="/search-for-images">
               <SearchForImages />

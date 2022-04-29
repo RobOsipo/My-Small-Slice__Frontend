@@ -47,7 +47,11 @@
   }
 
   .fade-in {
-    animation: fade-in 2s linear;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fade-in 5s linear;
   }
 
   @keyframes fade-in { 
