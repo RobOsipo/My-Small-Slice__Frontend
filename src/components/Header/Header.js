@@ -10,8 +10,8 @@ import classes from './Header.module.css'
 const Header = () => {
   return (
     <header className={classes.header}>
-        <Logostache width={70} height={70} />
-        <h1 className={classes.title}> <span className={classes['my-small-slice']}>My-Small-Slice </span><span className={classes.choices}> <Link className={classes.link}  to="/notes"> Notes <NotesIcon /> </Link>  <Link className={classes.link} to="/search-for-images">Photos <PhotosIcon /> </Link> <Link className={classes.link} to="/play-a-game"> Mini-Games <GamesIcon /> </Link> </span></h1>
+      <Link to="/choose">  <Logostache width={70} height={70} /> </Link>
+        <h1 className={classes.title}> <Link className={classes.link} to="/choose"> <span className={classes['my-small-slice']}>My-Small-Slice </span> </Link> <span className={classes.choices}> <Link className={classes.link}  to="/notes"> Notes <NotesIcon /> </Link>  <Link className={classes.link} to="/search-for-images">Photos <PhotosIcon /> </Link> <Link className={classes.link} to="/play-a-game"> Mini-Games <GamesIcon /> </Link> </span></h1>
         
     </header>
   )

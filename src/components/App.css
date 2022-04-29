@@ -4,6 +4,9 @@
 :root {
     --font-color-reg: #fff;
     --bg-white: rgba(235, 234, 234, 0.9);
+    --btn-bg-color-top: rgba(23, 1, 143, 0.8);
+    --btn-bg-color-btm: rgb(0, 12, 240, 0.8);
+
     --shadow-color: 209deg 49% 30%;
   --shadow-elevation-low:
     1.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.84),
@@ -51,4 +54,5 @@ body {
   hsl(178deg 11% 61%) 89%,
   hsl(0deg 2% 57%) 100%
 );
+background-size: 100% 100%;
 }
