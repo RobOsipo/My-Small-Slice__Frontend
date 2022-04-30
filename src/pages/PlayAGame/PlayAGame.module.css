@@ -58,8 +58,9 @@
       ); */
 /* }  */
 .title {
-    font-size: 1.5rem;
-    color: var(--bg-white)
+    font-size: 2.0rem;
+    color: var(--bg-white);
+    -webkit-text-stroke: 0.7px black; 
 }
 .game-container {
    
@@ -71,7 +72,8 @@
 }
 
 .pushable {
-    background: var(--btn-bg-color-top);
+    /* background: var(--btn-bg-color-top); */
+    background-color: var(--bg-white);
     border-radius: 12px;
     border: none;
     padding: 0;
@@ -81,13 +83,14 @@
     margin: .8rem;
   }
   .front {
+    color: black;
     display: block;
     padding: 12px 42px;
     border-radius: 12px;
     font-size: 1.25rem;
     font-weight: 900;
-    background: var(--btn-bg-color-btm);
-    color: white;
+    /* background: var(--btn-bg-color-btm); */
+    background-color: rgb(174, 174, 174);
     transform: translateY(-6px);
   }
 
