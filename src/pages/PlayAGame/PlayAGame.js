@@ -3,20 +3,32 @@ import Header from '../../components/Header/Header'
 import WordGame from '../../components/WordGame/WordGame'
 import RpsContextProvider from '../../context/rps-context/RpsContextProvider'
 import RpsGame from './components/RpsGame/RpsGame'
+import Tenzies from './components/Tenzies/Tenzies'
 
 import classes from './PlayAGame.module.css'
 const PlayAGame = () => {
   const [speedType, setSpeedType] = useState(false)
   const [playRps, setPlayRps] = useState(false)
+  const [playTenzies, setPlayTenzies] = useState(false)
   const [rpsChoice, setRpsChoice] = useState('')
 
 
   const toggleSpeedTypeGame = () => {
     setSpeedType(prevState => !prevState)
+    setPlayRps(false)
+    setPlayTenzies(false)
   }
 
   const toggleRps = () => {
     setPlayRps(prevState => !prevState)
+    setPlayTenzies(false)
+    setSpeedType(false)
+  }
+
+  const toggleTenzies = () => {
+    setPlayTenzies(prevState => !prevState)
+    setPlayRps(false)
+    setSpeedType(false)
   }
 
   return (
@@ -32,6 +44,9 @@ const PlayAGame = () => {
         <button onClick={toggleRps} className={classes.pushable}><span className={classes.front}>{!playRps ? 'Play' : 'Close'} Rock Paper Scissors </span></button>
         {playRps && <RpsContextProvider setRpsChoice={setRpsChoice} choice={rpsChoice}> <RpsGame setRpsChoice={setRpsChoice} /> </RpsContextProvider>}
 
+
+        <button onClick={toggleTenzies} className={classes.pushable}><span className={classes.front}>{!playTenzies ? 'Play' : 'Close'} Tenzies </span></button>
+        {playTenzies && <Tenzies />}
       </section>
 
      
