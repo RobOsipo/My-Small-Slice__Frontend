@@ -1,12 +1,12 @@
 
 .font-large {
     font-family: var(--handwritten-font);
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .font-small {
     font-family: var(--handwritten-font);
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 
 .button {
