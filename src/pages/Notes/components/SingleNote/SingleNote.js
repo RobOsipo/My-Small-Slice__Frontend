@@ -5,8 +5,8 @@ import classes from './SingleNote.module.css'
 const SingleNote = ({ title, content, deleteNote, id }) => {
   return (
     <Card>
-        <h1>{title}</h1>
-        <p>{content}</p>
+        <h1 className={classes['font-large']}>{title}</h1>
+        <p className={classes['font-small']}>{content}</p>
         <button className={classes.button} onClick={() => deleteNote(id)}>Delete</button>
     </Card>
   )
