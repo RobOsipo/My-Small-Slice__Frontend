@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 
 .area{
@@ -22,7 +23,7 @@
     width: 100%;
     height: 160vh;
     overflow: hidden;
-    /* z-index: 99; */
+    
 }
 
 .circles li{
@@ -34,6 +35,7 @@
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -150px;
+    
    
     
 }
@@ -43,6 +45,7 @@
     width: 80px;
     height: 80px;
     animation-delay: 0s;
+    
 }
 
 

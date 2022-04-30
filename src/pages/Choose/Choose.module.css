@@ -1,6 +1,6 @@
 
-.main-container {
-    background-image: linear-gradient(
+:root {
+    --bg-gradient: linear-gradient(
         40deg,
         hsl(240deg 100% 20%) 0%,
         hsl(230deg 57% 33%) 10%,
@@ -14,6 +14,10 @@
         hsl(178deg 11% 61%) 89%,
         hsl(0deg 2% 57%) 100%
       );
+}
+.main-container {
+    
+    background-image: var(--bg-gradient)
 }
 .choice-container {
     display: flex;
@@ -39,7 +43,7 @@
     border-radius: 50%;
 }
 
-@keyframes bounce {
+/* @keyframes bounce {
     0% {
       transform: translateY(0px);
       box-shadow: var(--shadow-elevation-low);
@@ -53,18 +57,48 @@
       );
       box-shadow: var(--shadow-elevation-low);
     }
-  }
+  } */
+
+  @keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	} 
+}
 
   .box {
-    animation:
+    /* animation:
       bounce alternate infinite
-      cubic-bezier(.2, .65, .6, 1);
+      cubic-bezier(.2, .65, .6, 1); */
+      border: solid black 0.0px;
+
+      animation: float 10s ease-in-out infinite;
   }
   .box:hover {
       background-color: black;
       color: var(--bg-white)
   }
   .box.one {
+    --bounce-offset: -20px;
+    animation-duration: 1500ms;
+  }
+  .box.two {
+    --bounce-offset: -30px;
+    animation-duration: 2000ms;
+  }
+  .box.three {
+    --bounce-offset: -40px;
+    animation-duration: 1800ms;
+  }
+  /* .box.one {
     --bounce-offset: -20px;
     animation-duration: 500ms;
   }
@@ -75,7 +109,7 @@
   .box.three {
     --bounce-offset: -40px;
     animation-duration: 800ms;
-  }
+  } */
 
 
 .link {

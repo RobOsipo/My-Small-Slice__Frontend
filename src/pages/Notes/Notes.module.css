@@ -7,10 +7,10 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(89, 88, 88);
-    background-color: #e5e5f7;
+    background-color: var(--bg-white);
 /* opacity: 0.8; */
 background-size: 20px 20px;
-background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
+background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, var(--bg-white) 1px, var(--bg-white));
    
 }
 
@@ -29,8 +29,8 @@ background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7
     gap: 2rem;
     padding: 2rem;
     background-color: rgb(89, 88, 88);
-    background-color: #e5e5f7;
+    background-color: var(--bg-white);
     background-size: 20px 20px;
-    background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
+    background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, var(--bg-white) 1px, var(--bg-white));
 
 }
