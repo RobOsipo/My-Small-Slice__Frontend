@@ -32,3 +32,7 @@
     cursor: pointer;
     transform: scale(1.2);
 }
+
+.win-lose {
+    padding: 0 1rem;
+}

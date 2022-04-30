@@ -17,7 +17,7 @@ const SearchForImages = () => {
         <section className={classes['main-container']}>
             <Header />
             <label className={classes.label} htmlFor="search">Search for Images Here</label>
-            <input className={classes.input} name="search" value={searchTerm} onChange={handleChange} />
+            <input className={classes.input} name="search" value={searchTerm} onChange={(e) => handleChange(e)} />
             <section className={classes['images-container']}>
                 <MapImages />
             </section>
