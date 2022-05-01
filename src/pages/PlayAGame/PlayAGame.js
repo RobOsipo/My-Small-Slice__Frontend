@@ -4,12 +4,14 @@ import WordGame from '../../components/WordGame/WordGame'
 import RpsContextProvider from '../../context/rps-context/RpsContextProvider'
 import RpsGame from './components/RpsGame/RpsGame'
 import Tenzies from './components/Tenzies/Tenzies'
+import Game from './components/TicTacToe/Game' // tic-tac-toe import
 
 import classes from './PlayAGame.module.css'
 const PlayAGame = () => {
   const [speedType, setSpeedType] = useState(false)
   const [playRps, setPlayRps] = useState(false)
   const [playTenzies, setPlayTenzies] = useState(false)
+  const [playTTT, setPlayTTT] = useState(false)
   const [rpsChoice, setRpsChoice] = useState('')
 
 
@@ -17,18 +19,28 @@ const PlayAGame = () => {
     setSpeedType(prevState => !prevState)
     setPlayRps(false)
     setPlayTenzies(false)
+    setPlayTTT(false)
   }
 
   const toggleRps = () => {
     setPlayRps(prevState => !prevState)
     setPlayTenzies(false)
     setSpeedType(false)
+    setPlayTTT(false)
   }
 
   const toggleTenzies = () => {
     setPlayTenzies(prevState => !prevState)
     setPlayRps(false)
     setSpeedType(false)
+    setPlayTTT(false)
+  }
+
+  const toggleTTT = () => {
+    setPlayTTT(prevState => !prevState)
+    setPlayRps(false)
+    setSpeedType(false)
+    setPlayTenzies(false)
   }
 
   return (
@@ -47,6 +59,9 @@ const PlayAGame = () => {
 
         <button onClick={toggleTenzies} className={classes.pushable}><span className={classes.front}>{!playTenzies ? 'Play' : 'Close'} Tenzies </span></button>
         {playTenzies && <Tenzies />}
+
+        <button onClick={toggleTTT} className={classes.pushable}><span className={classes.front}>{!playTTT ? 'Play' : 'Close'} 2 player Tic-Tac-Toe </span></button>
+          { playTTT && <Game /> }
       </section>
 
      
