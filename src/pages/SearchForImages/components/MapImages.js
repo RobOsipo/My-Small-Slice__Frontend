@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import ImageContext from '../../../context/image-context/image-context'
-import useHover from '../../../hooks/useHover'
+// import useHover from '../../../hooks/useHover'
 
 import classes from './MapImages.module.css'
 

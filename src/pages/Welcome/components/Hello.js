@@ -6,7 +6,7 @@ const Hello = () => {
     <div className={classes['hello-container']}>
         <div className={classes.display}>
             <h1 className={classes.title}>A-Small-Slice</h1>
-         <div className={classes['pop-in']}> <Logostache width={300} height={300} /> </div> 
+         <div className={classes['pop-in']}> <Logostache width={300} height={300} customClass="white-logo" /> </div> 
 
         </div>
 
