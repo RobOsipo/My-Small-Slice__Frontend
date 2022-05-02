@@ -1,16 +1,16 @@
 import useInput from '../../hooks/useInput'
 import classes from './SimpleInput.module.css'
 import Smiley from '../../icons/Smiley'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 const SimpleInput = (props) => {
 
    const {
-        value: enteredName ,
-        hasError: nameInputHasError ,
-        valueChangeHandler: nameChangedHandler ,
-        isValid: enteredNameIsValid,
-        inputBlurHandler: nameBlurHandler,
-        reset: resetNameInput
+        value: enteredPassword ,
+        hasError: passwordInputHasError ,
+        valueChangeHandler: passwordChangedHandler ,
+        isValid: enteredPasswordIsValid,
+        inputBlurHandler: passwordBlurHandler,
+        reset: resetPasswordInput
     } = useInput(value => value.trim() !== '')
 
     const {
@@ -26,7 +26,7 @@ const SimpleInput = (props) => {
 
   let formIsValid = false;
 
-  if (enteredNameIsValid && enteredEmailIsValid) {
+  if (enteredPasswordIsValid && enteredEmailIsValid) {
     formIsValid = true;
   }
 
@@ -36,16 +36,45 @@ const SimpleInput = (props) => {
   const formSubmissionHandler = (event) => {
     event.preventDefault();
 
-    if (!enteredNameIsValid) {
+    if (!enteredPasswordIsValid) {
       return;
     }
-    console.log(enteredName);
+    console.log(enteredPassword);
 
-    resetNameInput();
+    let body = {
+      email: enteredEmail,
+      password: enteredPassword
+    }
+
+    fetch(`http://localhost:4000/login`, { 
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+    .then(response =>{ 
+      console.log(response);
+      if(!response.ok){
+        throw new Error('there is an error with your')
+      }
+      response.json()
+    })
+    .then(data => {
+      console.log(data)
+      document.cookie = `token=${data.token};max-age=60*60`
+    })
+    .catch(err => console.log(err))
+      // berer token
+
+    resetPasswordInput();
     resetEmailInput();
+
+    
   };
 
-  const nameInputClasses = nameInputHasError
+  const passwordInputClasses = passwordInputHasError
     ? `${classes['form-control']} ${classes.invalid}`
     : `${classes['form-control']}`;
 
@@ -56,17 +85,17 @@ const SimpleInput = (props) => {
   return (
     <form onSubmit={formSubmissionHandler} className={classes.form}>
       <h1 className={classes.title}>Please {props.buttonText} To Continue</h1>
-      <div className={nameInputClasses}>
-        <label htmlFor='name'>Your Name</label>
+      <div className={passwordInputClasses}>
+        <label htmlFor='name'>Your Password</label>
         <input
           type='text'
           id='name'
-          onChange={nameChangedHandler}
-          onBlur={nameBlurHandler}
-          value={enteredName}
+          onChange={passwordChangedHandler}
+          onBlur={passwordBlurHandler}
+          value={enteredPassword}
         />
-        {nameInputHasError && (
-          <p className={classes['error-text']}>Name must not be empty.</p>
+        {passwordInputHasError && (
+          <p className={classes['error-text']}>Password must not be empty.</p>
         )}
       </div>
       <div className={emailInputClasses}>
@@ -83,7 +112,7 @@ const SimpleInput = (props) => {
         )}
       </div>
       <div className={classes['form-control']}>
-      <Link className={classes.link} to={props.linkTo}><button id={classes.button} className={classes.button} disabled={!formIsValid}>{props.buttonText}</button></Link>
+      <button id={classes.button} className={classes.button} disabled={!formIsValid}><Link className={classes.link} to={props.linkTo}>{props.buttonText}</Link></button>
       </div>
     </form>
   );
