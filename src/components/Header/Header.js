@@ -1,6 +1,6 @@
 import React from 'react'
 import Logostache from '../../icons/Logostache'
-import {Link} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 import NotesIcon from '../../icons/NotesIcon'
 import PhotosIcon from '../../icons/PhotosIcon'
 import GamesIcon from '../../icons/GamesIcon'
@@ -16,9 +16,9 @@ const Header = () => {
     </div>
 
     <div className={classes['flex-two']}>
-      <Link className={classes.link}  to="/notes"> Notes <NotesIcon /> </Link> 
-      <Link className={classes.link} to="/search-for-images">Photos <PhotosIcon /> </Link>
-      <Link className={classes.link} to="/play-a-game"> Mini-Games <GamesIcon /> </Link> 
+      <NavLink activeClassName={classes.active} className={classes.link}  to="/notes"> Notes <NotesIcon /> </NavLink> 
+      <NavLink activeClassName={classes.active} className={classes.link} to="/search-for-images">Photos <PhotosIcon /> </NavLink>
+      <NavLink activeClassName={classes.active} className={classes.link} to="/play-a-game"> Mini-Games <GamesIcon /> </NavLink> 
     </div>
         
     </header>
