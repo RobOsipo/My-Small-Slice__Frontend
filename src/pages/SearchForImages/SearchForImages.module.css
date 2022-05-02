@@ -16,3 +16,8 @@
 .input {
     margin: 2rem;
 }
+
+.loading {
+    color: var(--bg-white);
+    text-align: center;
+}
