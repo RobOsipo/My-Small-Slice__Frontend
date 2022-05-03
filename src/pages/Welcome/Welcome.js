@@ -10,7 +10,7 @@ const Welcome = () => {
 
       <div className={classes.area}>
 
-      {/* <ul class={classes.circles}>
+      <ul class={classes.circles}>
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -21,7 +21,8 @@ const Welcome = () => {
                                 <li></li>
                                 <li></li>
                                 <li></li>
-                        </ul> */}
+                                <li></li>
+                        </ul>
 
         <main className={`${classes['main-container']}`}>
             <Hello />
