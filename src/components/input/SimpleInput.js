@@ -1,8 +1,11 @@
 import useInput from '../../hooks/useInput'
 import classes from './SimpleInput.module.css'
-import Smiley from '../../icons/Smiley'
-import { Link, Redirect } from 'react-router-dom'
+// import Smiley from '../../icons/Smiley'
+import { useHistory } from 'react-router-dom'
 const SimpleInput = (props) => {
+  
+  const history = useHistory()
+  
 
    const {
         value: enteredPassword ,
@@ -53,6 +56,8 @@ const SimpleInput = (props) => {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       }
+
+
     })
     .then(response =>{ 
       console.log(response);
@@ -70,6 +75,9 @@ const SimpleInput = (props) => {
 
     resetPasswordInput();
     resetEmailInput();
+
+    history.replace(props.linkTo)
+   
 
     
   };
@@ -112,7 +120,7 @@ const SimpleInput = (props) => {
         )}
       </div>
       <div className={classes['form-control']}>
-      <button id={classes.button} className={classes.button} disabled={!formIsValid}><Link className={classes.link} to={props.linkTo}>{props.buttonText}</Link></button>
+      <button id={classes.button} className={classes.button} disabled={!formIsValid}>{props.buttonText}</button>
       </div>
     </form>
   );
