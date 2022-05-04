@@ -1,7 +1,7 @@
 import React from 'react'
 import WordGame from './WordGame/WordGame'
 import SimpleInput from './input/SimpleInput'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Welcome from '../pages/Welcome/Welcome'
 import SearchForImages from '../pages/SearchForImages/SearchForImages'
 import Notes from '../pages/Notes/Notes'
@@ -10,8 +10,24 @@ import Login from '../pages/Login/Login'
 import Choose from '../pages/Choose/Choose'
 import './App.css'
 
+const checkAuth = () => {
+  return true
+}
+
+const ProtectedRoute = ({component: Component, ...rest}) => {
+  return (
+    <Route 
+      {...rest}
+      render={(props) => checkAuth()
+      ? <Component {...props} />
+      : <Redirect to="/login" />
+      }
+    />
+  )
+}
 
 function App() {
+
   return (
     <>
     
@@ -22,9 +38,9 @@ function App() {
           <Route path="/login">
               <Login />
           </Route>
-          <Route path="/choose">
-            <Choose />
-          </Route>
+
+          <ProtectedRoute path="/choose" component={Choose} />
+  
           <Route path="/search-for-images">
               <SearchForImages />
            </Route>

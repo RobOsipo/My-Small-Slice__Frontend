@@ -1,6 +1,7 @@
-# Small-- A website that allows you to blog, search and like photos, and play mini-games
-* Will include a speed typing mini game
-* Will include image search funtionality
-* Will include A Notes/Blog section
+# My-Small-Slice
+## Fullstack application - server side code located at https://github.com/RobOsipo/My-Small-Slice__Backend
+* Has a notes/reminders section
+* Include an image search and like section
+* Will include a list of mini-games whose logic I will code from scratch and/or with the help of an outside api
 
 
