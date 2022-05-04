@@ -62,15 +62,15 @@ const SimpleInput = (props) => {
     .then(response =>{ 
       console.log(response);
       if(!response.ok){
-        throw new Error('there is an error ')
+        throw new Error('In my !response.ok error')
       }
       response.json()
     })
     .then(data => {
       console.log(data)
-      document.cookie = `token=${data.token};max-age=60*60`
+      document.cookie = `${props.tokenName}=true;max-age=60*10000`
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log('In my .catch error', err))
       
 
     resetPasswordInput();

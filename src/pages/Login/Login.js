@@ -21,7 +21,7 @@ const Login = () => {
             </ul>
         <main className={classes['main-container']}>
             
-        <div className={classes['input-container']}> <FormCard>  <SimpleInput buttonText="Login" linkTo="/choose" formEndPoint="/login" /> </FormCard> </div>
+        <div className={classes['input-container']}> <FormCard>  <SimpleInput buttonText="Login" linkTo="/choose" formEndPoint="/login" tokenName="loginToken" /> </FormCard> </div>
             
         </main>
       </div>

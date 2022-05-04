@@ -8,10 +8,14 @@ import Notes from '../pages/Notes/Notes'
 import PlayAGame from '../pages/PlayAGame/PlayAGame'
 import Login from '../pages/Login/Login'
 import Choose from '../pages/Choose/Choose'
+
+import cookie from 'cookie'
 import './App.css'
 
 const checkAuth = () => {
-  return true
+  const cookies = cookie.parse(document.cookie)
+  return cookies["loginToken"] ? true : false
+
 }
 
 const ProtectedRoute = ({component: Component, ...rest}) => {
