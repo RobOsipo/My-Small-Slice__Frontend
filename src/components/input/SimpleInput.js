@@ -49,7 +49,7 @@ const SimpleInput = (props) => {
       password: enteredPassword
     }
 
-    fetch(`http://localhost:4000/login`, { 
+    fetch(`http://localhost:4000${props.formEndPoint}`, { 
       method: 'POST',
       body: JSON.stringify(body),
       headers: {
@@ -62,7 +62,7 @@ const SimpleInput = (props) => {
     .then(response =>{ 
       console.log(response);
       if(!response.ok){
-        throw new Error('there is an error with your')
+        throw new Error('there is an error ')
       }
       response.json()
     })
@@ -71,7 +71,7 @@ const SimpleInput = (props) => {
       document.cookie = `token=${data.token};max-age=60*60`
     })
     .catch(err => console.log(err))
-      // berer token
+      
 
     resetPasswordInput();
     resetEmailInput();

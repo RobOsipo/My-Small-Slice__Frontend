@@ -10,7 +10,7 @@ const Welcome = () => {
 
       <div className={classes.area}>
 
-      <ul class={classes.circles}>
+      <ul className={classes.circles}>
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -27,7 +27,7 @@ const Welcome = () => {
         <main className={`${classes['main-container']}`}>
             <Hello />
             <FormCard>
-            <SimpleInput buttonText="Register" linkTo="/login" />
+            <SimpleInput buttonText="Register" linkTo="/login" formEndPoint="/signup"  />
 
             </FormCard>
             

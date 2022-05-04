@@ -6,7 +6,7 @@ import classes from './Login.module.css'
 const Login = () => {
   return (
       <div className={classes.area}>
-       <ul class={classes.circles}>
+       <ul className={classes.circles}>
                     <li></li>
                     <li></li>
                     <li></li>
@@ -21,7 +21,7 @@ const Login = () => {
             </ul>
         <main className={classes['main-container']}>
             
-        <div className={classes['input-container']}> <FormCard>  <SimpleInput buttonText="Login" linkTo="/choose" /> </FormCard> </div>
+        <div className={classes['input-container']}> <FormCard>  <SimpleInput buttonText="Login" linkTo="/choose" formEndPoint="/login" /> </FormCard> </div>
             
         </main>
       </div>

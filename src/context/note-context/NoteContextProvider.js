@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import NoteContext from './note-context'
 
 const NoteContextProvider = ({ children }) => {
-const [state, setState] = React.useState('')
+const [notes, setNotes] = React.useState('')
 
     // TODO: Fetch Notes/Blogs data from the REST API I built as the backend and store it in the Providers value
 
@@ -13,9 +13,9 @@ const [state, setState] = React.useState('')
             .then(err => console.log(err))
     }, [])
 
-    console.log(state)
+    // console.log(notes)
   return (
-    <NoteContext.Provider value={state}>
+    <NoteContext.Provider value={notes}>
         {children}
     </NoteContext.Provider>
   )
