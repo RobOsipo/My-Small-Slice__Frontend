@@ -9,11 +9,11 @@ const [notes, setNotes] = React.useState('')
     useEffect(() => {
         fetch('http://localhost:4000/blog')
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data =>  setNotes(data))
             .then(err => console.log(err))
     }, [])
 
-    // console.log(notes)
+    
   return (
     <NoteContext.Provider value={notes}>
         {children}

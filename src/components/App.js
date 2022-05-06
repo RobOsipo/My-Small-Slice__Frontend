@@ -6,6 +6,7 @@ import Notes from '../pages/Notes/Notes'
 import PlayAGame from '../pages/PlayAGame/PlayAGame'
 import Login from '../pages/Login/Login'
 import Choose from '../pages/Choose/Choose'
+import NoteContextProvider from '../context/note-context/NoteContextProvider'
 
 import cookie from 'cookie'
 import './App.css'
@@ -27,7 +28,12 @@ const ProtectedRoute = ({component: Component, ...rest}) => {
   )
 }
 
+
 function App() {
+  const [note, setNote] = React.useState({
+    title: "",
+    content: ""
+  });
 
   return (
     <>
@@ -46,7 +52,9 @@ function App() {
               <SearchForImages />
            </Route>
           <Route path="/notes"> 
-              <Notes />
+            <NoteContextProvider note={note}>
+                <Notes note={note} setNote={setNote} />
+            </NoteContextProvider>
           </Route>
           <Route path="/play-a-game"> 
               <PlayAGame />

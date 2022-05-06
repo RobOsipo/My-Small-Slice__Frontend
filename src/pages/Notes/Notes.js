@@ -1,23 +1,20 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Header from '../../components/Header/Header'
 import Card from './components/Card/Card'
 import SingleNote from './components/SingleNote/SingleNote'
 import CreateArea from './components/CreateArea/CreateArea'
+import NoteContext from '../../context/note-context/note-context'
+
 
 import classes from './Notes.module.css'
 
-const Notes = () => {
-    const [notes, setNotes] = React.useState([{title: 'A day of code', content: 'React is fun!'}, {title: 'Grocery List', content: 'Bacon & Eggs'}]);
-    const [note, setNote] = React.useState({
-        title: "",
-        content: ""
-      });
+const Notes = ({note, setNote}) => {
 
-    const addNote = (newNote) => {
-      setNotes(prevNotes => {
-        return [...prevNotes, newNote];
-      });
-    }
+    const [notes, setNotes] = React.useState([{title: 'DUMMY', content: 'React is fun!'}, {title: 'DUMMY', content: 'Bacon & Eggs'}]);
+  
+    const fetchNoteContext = useContext(NoteContext) || notes
+    console.log('fetch ctx', fetchNoteContext)
+
 
     function deleteNote(id) {
         setNotes(prevNotes => {
@@ -41,16 +38,39 @@ const Notes = () => {
 
       const submitNote = (event) => {
         event.preventDefault();
-        addNote(note);
+        // addNote(note);
+
+        fetch("http://localhost:4000/blog", {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                post_title: note.title,
+                post_body: note.content
+            })
+            })
+            .then( (response) => { 
+             console.log('response', response)
+            })
+            .catch(err => console.log('.catch', err))
+
+
         setNote({
           title: "",
           content: ""
         });
       }
 
-      const renderNotes = notes.map((note, index) => {
+
+     
+
+      // todo: map over note context instead
+  
+      const renderNotes = fetchNoteContext.map((note, index) => {
           return (
-              <SingleNote id={index} deleteNote={deleteNote} title={note.title} content={note.content} key={index} />
+              <SingleNote id={index} deleteNote={deleteNote} title={note.post_title} content={note.post_body} key={index} />
           )
       })
 
