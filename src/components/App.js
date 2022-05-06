@@ -1,6 +1,4 @@
 import React from 'react'
-import WordGame from './WordGame/WordGame'
-import SimpleInput from './input/SimpleInput'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import Welcome from '../pages/Welcome/Welcome'
 import SearchForImages from '../pages/SearchForImages/SearchForImages'
@@ -15,7 +13,6 @@ import './App.css'
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie)
   return cookies["loginToken"] ? true : false
-
 }
 
 const ProtectedRoute = ({component: Component, ...rest}) => {

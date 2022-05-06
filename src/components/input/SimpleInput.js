@@ -93,19 +93,7 @@ const SimpleInput = (props) => {
   return (
     <form onSubmit={formSubmissionHandler} className={classes.form}>
       <h1 className={classes.title}>Please {props.buttonText} To Continue</h1>
-      <div className={passwordInputClasses}>
-        <label htmlFor='name'>Your Password</label>
-        <input
-          type='text'
-          id='name'
-          onChange={passwordChangedHandler}
-          onBlur={passwordBlurHandler}
-          value={enteredPassword}
-        />
-        {passwordInputHasError && (
-          <p className={classes['error-text']}>Password must not be empty.</p>
-        )}
-      </div>
+     
       <div className={emailInputClasses}>
         <label htmlFor='email'>Your E-Mail</label>
         <input
@@ -117,6 +105,19 @@ const SimpleInput = (props) => {
         />
         {emailInputHasError && (
           <p className={classes['error-text']}>Please enter a valid email.</p>
+        )}
+      </div>
+      <div className={passwordInputClasses}>
+        <label htmlFor='name'>Your Password</label>
+        <input
+          type='text'
+          id='name'
+          onChange={passwordChangedHandler}
+          onBlur={passwordBlurHandler}
+          value={enteredPassword}
+        />
+        {passwordInputHasError && (
+          <p className={classes['error-text']}>Password must not be empty.</p>
         )}
       </div>
       <div className={classes['form-control']}>
