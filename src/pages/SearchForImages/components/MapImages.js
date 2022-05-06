@@ -12,7 +12,7 @@ const fetchImageContext = useContext(ImageContext)
 const data = fetchImageContext.map((image, index) => (
     <>
     {/* <div className={classes.images} style={{ backgroundImage: "url('image.url')"}}></div> */}
-    <img className={classes.images} src={image.url} alt={image.title}  />
+    <img className={classes.images} src={image.url} alt={image.title} key={index}  />
     </>
 ))
 

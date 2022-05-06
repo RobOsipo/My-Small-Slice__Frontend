@@ -1,7 +1,6 @@
 import useInput from '../../hooks/useInput'
 import classes from './SimpleInput.module.css'
-// import Smiley from '../../icons/Smiley'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 const SimpleInput = (props) => {
   
   const history = useHistory()
@@ -42,7 +41,6 @@ const SimpleInput = (props) => {
     if (!enteredPasswordIsValid) {
       return;
     }
-    console.log(enteredPassword);
 
     let body = {
       email: enteredEmail,
@@ -76,7 +74,7 @@ const SimpleInput = (props) => {
     resetPasswordInput();
     resetEmailInput();
 
-    history.replace(props.linkTo)
+    history.replace(props.replaceTo)
    
 
     
@@ -123,6 +121,7 @@ const SimpleInput = (props) => {
       <div className={classes['form-control']}>
       <button id={classes.button} className={classes.button} disabled={!formIsValid}>{props.buttonText}</button>
       </div>
+      <Link to={props.linkTo} className={classes.link}>I {props.linkText}!</Link>
     </form>
   );
 };

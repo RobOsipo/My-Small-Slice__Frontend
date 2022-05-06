@@ -8,8 +8,9 @@
 .link {
     text-decoration: none;
     color: white;
-    /* text-decoration: line-through;
-    cursor: not-allowed; */
+}
+.link:hover {
+    color: rgb(214, 212, 212, 0.5);
 }
 
 .form {

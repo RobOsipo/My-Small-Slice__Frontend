@@ -27,7 +27,7 @@ const Welcome = () => {
         <main className={`${classes['main-container']}`}>
             <Hello />
             <FormCard>
-            <SimpleInput buttonText="Register" linkTo="/login" formEndPoint="/signup" tokenName="signupToken"  />
+            <SimpleInput buttonText="Register" replaceTo="/login" formEndPoint="/signup" tokenName="signupToken" linkTo="/login" linkText="Already Am registered" />
 
             </FormCard>
             
