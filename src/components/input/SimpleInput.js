@@ -100,22 +100,24 @@ const SimpleInput = (props) => {
           onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
           value={enteredEmail}
+          data-testid="email-input"
         />
         {emailInputHasError && (
-          <p className={classes['error-text']}>Please enter a valid email.</p>
+          <p className={classes['error-text']} data-testid="error-msg">Please enter a valid email.</p>
         )}
       </div>
       <div className={passwordInputClasses}>
-        <label htmlFor='name'>Your Password</label>
+        <label htmlFor='password'>Your Password</label>
         <input
-          type='text'
-          id='name'
+          type='password'
+          id='password'
           onChange={passwordChangedHandler}
           onBlur={passwordBlurHandler}
           value={enteredPassword}
+          data-testid="password-input"
         />
         {passwordInputHasError && (
-          <p className={classes['error-text']}>Password must not be empty.</p>
+          <p className={classes['error-text']} data-testid="error-msg2">Password must not be empty.</p>
         )}
       </div>
       <div className={classes['form-control']}>
