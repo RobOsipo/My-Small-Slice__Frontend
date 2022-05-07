@@ -11,7 +11,7 @@ import NoteContextProvider from '../context/note-context/NoteContextProvider'
 import cookie from 'cookie'
 import './App.css'
 
-const checkAuth = () => {
+export const checkAuth = () => {
   const cookies = cookie.parse(document.cookie)
   return cookies["loginToken"] ? true : false
 }

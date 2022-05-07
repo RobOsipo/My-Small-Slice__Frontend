@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
-import WordGame from '../../components/WordGame/WordGame'
+import WordGame from './components/WordGame/WordGame'
 import RpsContextProvider from '../../context/rps-context/RpsContextProvider'
 import RpsGame from './components/RpsGame/RpsGame'
 import Tenzies from './components/Tenzies/Tenzies'

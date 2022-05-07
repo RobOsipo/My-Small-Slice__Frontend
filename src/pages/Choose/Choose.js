@@ -6,7 +6,7 @@ import classes from './Choose.module.css'
 
 const Choose = () => {
   return (
-    <section className={classes['main-container']}>
+    <section className={classes['main-container']} >
         <Header />
 
         <section className={classes['choice-container']}>
