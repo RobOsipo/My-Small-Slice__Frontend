@@ -1,6 +1,6 @@
 import React from 'react'
 import Logostache from '../../icons/Logostache'
-import {NavLink, Link} from 'react-router-dom'
+import {NavLink, Link, Router} from 'react-router-dom'
 import NotesIcon from '../../icons/NotesIcon'
 import PhotosIcon from '../../icons/PhotosIcon'
 import GamesIcon from '../../icons/GamesIcon'
