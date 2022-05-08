@@ -7,14 +7,17 @@ import SimpleInput from './SimpleInput'
 describe('My SimpleInput component correctly handles the email and password entered by the user', () => {
 
     test('render email input', () => {
+
         render(<Router><SimpleInput /></Router>);
      
         const inputEl = screen.getByTestId("email-input");
+
         expect(inputEl).toBeInTheDocument();
         expect(inputEl).toHaveAttribute("type", "email");
       });
 
       test('pass valid email to test email input field', () => {
+          
         render(<Router><SimpleInput /></Router>);
      
         const inputEl = screen.getByTestId("email-input");
@@ -32,7 +35,7 @@ describe('My SimpleInput component correctly handles the email and password ente
      
         expect(screen.getByTestId("email-input")).toHaveValue("test");
         // expect(screen.queryByTestId("error-msg")).toBeInTheDocument();
-        // expect(screen.queryByTestId("error-msg").textContent).toEqual("Please enter a valid email.");
+        // expect(screen.queryByTestId("error-msg")).textContent.toBe("Please enter a valid email.");
       });
 
 
@@ -40,6 +43,7 @@ describe('My SimpleInput component correctly handles the email and password ente
         render(<Router><SimpleInput /></Router>);
      
         const inputEl = screen.getByTestId("password-input");
+
         expect(inputEl).toBeInTheDocument();
         expect(inputEl).toHaveAttribute("type", "password");
       });
@@ -62,6 +66,6 @@ describe('My SimpleInput component correctly handles the email and password ente
      
         expect(screen.getByTestId("password-input")).toHaveValue("");
         // expect(screen.queryByTestId("error-msg2")).toBeInTheDocument();
-        // expect(screen.queryByTestId("error-msg2").textContent).toEqual("Password must not be empty.");
+        // expect(screen.queryByTestId("error-msg2")).textContent.toBe("Password must not be empty.");
       });
 })
