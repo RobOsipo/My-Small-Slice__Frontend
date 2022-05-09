@@ -17,7 +17,7 @@ describe('My SimpleInput component correctly handles the email and password ente
       });
 
       test('pass valid email to test email input field', () => {
-          
+
         render(<Router><SimpleInput /></Router>);
      
         const inputEl = screen.getByTestId("email-input");
@@ -34,7 +34,7 @@ describe('My SimpleInput component correctly handles the email and password ente
         userEvent.type(inputEl, "test");
      
         expect(screen.getByTestId("email-input")).toHaveValue("test");
-        // expect(screen.queryByTestId("error-msg")).toBeInTheDocument();
+        
         // expect(screen.queryByTestId("error-msg")).textContent.toBe("Please enter a valid email.");
       });
 
@@ -65,7 +65,7 @@ describe('My SimpleInput component correctly handles the email and password ente
         userEvent.type(inputEl, "");
      
         expect(screen.getByTestId("password-input")).toHaveValue("");
-        // expect(screen.queryByTestId("error-msg2")).toBeInTheDocument();
+        
         // expect(screen.queryByTestId("error-msg2")).textContent.toBe("Password must not be empty.");
       });
 })

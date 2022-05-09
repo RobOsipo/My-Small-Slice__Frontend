@@ -65,7 +65,7 @@ const SimpleInput = (props) => {
       response.json()
     })
     .then(data => {
-      console.log(data)
+      console.log('data in the same block as my document.cookie', data)
       document.cookie = `${props.tokenName}=true;max-age=60*10000`
     })
     .catch(err => console.log('In my .catch error', err))
