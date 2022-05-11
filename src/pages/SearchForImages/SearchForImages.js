@@ -26,16 +26,16 @@ const SearchForImages = () => {
 
 
 
-    // todo: left searchBy prop hardcoded to prevent too many request
+   
   return (
       <ImageContextProvider searchBy={submitSearch}> 
 
         <section className={classes['main-container']}>
             <Header />
-            <form onSubmit={handleSubmit}>
+            <form className={classes.form} onSubmit={handleSubmit}>
                 <label className={classes.label} htmlFor="search">Search for Images Here</label>
                 <input className={classes.input} name="search" value={searchTerm} onChange={(e) => handleChange(e)} />
-                <button type="submit" value="submit">Click to Search</button>
+                <button className={classes.button} type="submit" value="submit">Click to Search</button>
             </form>
             {loadingFlag && <h2 className={classes.loading}>Please wait while we fetch your photos</h2>}
             <section className={classes['images-container']}>

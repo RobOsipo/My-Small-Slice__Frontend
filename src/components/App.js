@@ -28,10 +28,10 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
 };
 
 function App() {
-  const [note, setNote] = React.useState({
+  const [note, setNote] = React.useState([{
     title: "",
     content: "",
-  });
+  }]);
 
   return (
     <NoteContextProvider note={note}>

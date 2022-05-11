@@ -5,6 +5,7 @@ import RpsContextProvider from '../../context/rps-context/RpsContextProvider'
 import RpsGame from './components/RpsGame/RpsGame'
 import Tenzies from './components/Tenzies/Tenzies'
 import Game from './components/TicTacToe/Game' // tic-tac-toe import
+import retroImage from '../../localImages/retro2.jpg'
 
 import classes from './PlayAGame.module.css'
 const PlayAGame = () => {
@@ -47,20 +48,39 @@ const PlayAGame = () => {
     <section className={`${classes['main-container']}`}>
     <Header />
 
+    {/* <div className={classes['retro-button-container']}>
+      <span className={classes['retro-buttons']}>A</span>
+      <span className={classes['retro-buttons']}>B</span>
+    </div>
+
+    <img src={retroImage} alt="anything" className={classes['retro-image']} /> */}
+
+
       <section className={classes['game-container']}>
+
+      <div className={classes['retro-button-container']}>
+      <span className={classes['retro-buttons']}>A</span>
+      <span className={classes['retro-buttons']}>B</span>
+    </div>
+
+    <img src={retroImage} alt="anything" className={classes['retro-image']} />
+
         <h1 className={classes.title}>A List of Mini-Games Coded from Scratch For Your Entertainment</h1>
 
-        <button onClick={toggleSpeedTypeGame} className={classes.pushable}><span className={classes.front}>{!speedType ? 'Play' : 'Close'} The Speed Typing Game</span></button>
+        <button onClick={toggleSpeedTypeGame} className={classes['start-btn']}>{!speedType ? 'Play' : 'Close'} The Speed Typing Game</button>
+        
         {speedType && <WordGame />}
 
-        <button onClick={toggleRps} className={classes.pushable}><span className={classes.front}>{!playRps ? 'Play' : 'Close'} Rock Paper Scissors </span></button>
+        <button onClick={toggleRps} className={classes['start-btn']}>{!speedType ? 'Play' : 'Close'} Rock Paper Scissors</button>
+        
         {playRps && <RpsContextProvider setRpsChoice={setRpsChoice} choice={rpsChoice}> <RpsGame setRpsChoice={setRpsChoice} /> </RpsContextProvider>}
 
-
-        <button onClick={toggleTenzies} className={classes.pushable}><span className={classes.front}>{!playTenzies ? 'Play' : 'Close'} Tenzies </span></button>
+        <button onClick={toggleTenzies} className={classes['start-btn']}>{!speedType ? 'Play' : 'Close'} Tenzies</button>
+       
         {playTenzies && <Tenzies />}
 
-        <button onClick={toggleTTT} className={classes.pushable}><span className={classes.front}>{!playTTT ? 'Play' : 'Close'} 2 player Tic-Tac-Toe </span></button>
+        <button onClick={toggleTTT} className={classes['start-btn']}>{!speedType ? 'Play' : 'Close'} 2 Player Tic-Tac-Toe</button>
+        
           { playTTT && <Game /> }
       </section>
 
