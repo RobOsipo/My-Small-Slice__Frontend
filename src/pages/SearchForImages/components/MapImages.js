@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import ImageContext from '../../../context/image-context/image-context'
 // import useHover from '../../../hooks/useHover'
 
-import classes from './MapImages.module.css'
+import classes from './MapImages.module.scss'
 
 const MapImages = () => {
 // const [hovered, ref] = useHover()

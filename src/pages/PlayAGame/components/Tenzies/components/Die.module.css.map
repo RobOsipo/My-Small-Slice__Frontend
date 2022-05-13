@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,SAAS,CAAC;EACN,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,mBAAmB;EAC3C,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,OAAO;CAClB;;AAED,AAAA,QAAQ,CAAC;EACL,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "Die.module.scss"
+    ],
+    "names": [],
+    "file": "Die.module.css"
+}

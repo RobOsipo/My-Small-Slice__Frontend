@@ -1,33 +1,41 @@
-
-
 .title {
-    /* text-shadow: var(--txt-shadow-light); */
-    -webkit-text-stroke: 0.3px black; 
-    font-size: 2rem;
+  /* text-shadow: var(--txt-shadow-light); */
+  -webkit-text-stroke: 0.3px black;
+  font-size: 2rem;
 }
+
 .link {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
+
 .link:hover {
-    color: rgb(214, 212, 212, 0.5);
+  color: #d6d4d4;
+  opacity: 0.5;
 }
 
 .form {
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 30rem;
-    color: var(--font-color-reg);
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 30rem;
+  color: var(--font-color-reg);
 }
 
 .form-control {
   margin-bottom: 1rem;
 }
 
-.form-control input,
-.form-control label {
+.form-control label,
+.form-control input {
   display: block;
 }
 
@@ -52,7 +60,6 @@
   background-color: #e0d4fd;
 }
 
-
 .button {
   font: inherit;
   background-color: #443170;
@@ -63,21 +70,18 @@
   cursor: pointer;
 }
 
-.button:hover,
-.button:active {
+.button:hover, .button:active {
   background-color: #a081ee;
   border-color: #33059e;
 }
-.button:disabled,
-.button:disabled:hover,
-.button:disabled:active  {
+
+.button:disabled, .button:disabled:hover, .button:disabled:active {
   background-color: #ccc;
   color: #292929;
   border-color: #ccc;
   cursor: not-allowed;
   text-decoration: line-through;
 }
-
 
 .invalid input {
   border: 1px solid #b40e0e;
@@ -92,3 +96,4 @@
 .error-text {
   color: #b44141;
 }
+/*# sourceMappingURL=SimpleInput.module.css.map */

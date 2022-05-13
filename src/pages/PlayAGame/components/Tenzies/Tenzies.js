@@ -1,7 +1,7 @@
 import React from "react"
 import Die from "./components/Die"
 import {nanoid} from "nanoid"
-import classes from './Tenzies.module.css'
+import classes from './Tenzies.module.scss'
 
 
 export default function Tenzies() {

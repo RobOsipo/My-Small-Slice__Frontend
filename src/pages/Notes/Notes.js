@@ -6,7 +6,7 @@ import CreateArea from './components/CreateArea/CreateArea'
 import NoteContext from '../../context/note-context/note-context'
 
 
-import classes from './Notes.module.css'
+import classes from './Notes.module.scss'
 
 const Notes = ({note, setNote}) => {
 

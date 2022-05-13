@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import classes from './RpsGame.module.css'
+import classes from './RpsGame.module.scss'
 import RpsContext from '../../../../context/rps-context/RpsContext'
 import Smiley from '../../../../icons/Smiley'
 import FrownIcon from '../../../../icons/FrownIcon'

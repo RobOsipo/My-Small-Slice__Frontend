@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './CreateArea.module.css'
+import classes from './CreateArea.module.scss'
 
 function CreateArea({ note, handleChange, submitNote}) {
    

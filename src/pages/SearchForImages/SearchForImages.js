@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
 import ImageContextProvider from '../../context/image-context/ImageContextProvider'
 import MapImages from './components/MapImages'
-import classes from './SearchForImages.module.css'
+import classes from './SearchForImages.module.scss'
 
 const SearchForImages = () => {
     const [searchTerm, setSearchTerm] = useState('')

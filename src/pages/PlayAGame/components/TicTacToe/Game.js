@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { calculateWinner } from './helpers';
 import Board from './Board';
 
-import classes from './Game.module.css'
+import classes from './Game.module.scss'
 
 const styles = {
     width: '200px',

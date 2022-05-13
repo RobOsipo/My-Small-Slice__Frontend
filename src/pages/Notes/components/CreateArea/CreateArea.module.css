@@ -1,50 +1,66 @@
+@-webkit-keyframes drop-in {
+  from {
+    -webkit-transform: rotate(-30deg) translateY(-100%);
+            transform: rotate(-30deg) translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotate(0deg) translateY(0%);
+            transform: rotate(0deg) translateY(0%);
+    opacity: 1;
+  }
+}
 
 @keyframes drop-in {
-    from {
-      transform:
-        rotate(-30deg) translateY(-100%);
-      opacity: 0;
-    }
-    to {
-      transform:
-        rotate(0deg) translateY(0%);
-      opacity: 1;
-    }
+  from {
+    -webkit-transform: rotate(-30deg) translateY(-100%);
+            transform: rotate(-30deg) translateY(-100%);
+    opacity: 0;
   }
-
-
+  to {
+    -webkit-transform: rotate(0deg) translateY(0%);
+            transform: rotate(0deg) translateY(0%);
+    opacity: 1;
+  }
+}
 
 .form {
-    animation: drop-in 1000ms;
-    position: relative;
-    width: 480px;
-    margin: 30px auto 20px auto;
-    background: #fff;
-    padding: 15px;
-    border-radius: 7px;
-    box-shadow: 0 1px 5px rgb(138, 137, 137);
-  }
-  .form > input,
-  .form > textarea {
-    width: 100%;
-    border: none;
-    padding: 4px;
-    outline: none;
-    font-size: 1.2em;
-    font-family: inherit;
-    resize: none;
-  }
-  .form > button {
-    position: absolute;
-    right: 18px;
-    bottom: -18px;
-    background:  #508163;
-    color: var(--bg-white);
-    border: none;
-    border-radius: 50%;
-    width: 56px;
-    height: 56px;
-    box-shadow: var(--shadow-elevation-low);
-    cursor: pointer;
-    outline: none;
-  }
+  -webkit-animation: drop-in 1000ms;
+          animation: drop-in 1000ms;
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 1px 5px #8a8989;
+          box-shadow: 0 1px 5px #8a8989;
+}
+
+.form > input,
+.form > textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+.form > button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #508163;
+  color: var(--bg-white);
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  -webkit-box-shadow: var(--shadow-elevation-low);
+          box-shadow: var(--shadow-elevation-low);
+  cursor: pointer;
+  outline: none;
+}
+/*# sourceMappingURL=CreateArea.module.css.map */

@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../Card/Card'
-import classes from './SingleNote.module.css'
+import classes from './SingleNote.module.scss'
 
 const SingleNote = ({ title, content, deleteNote, id }) => {
   return (

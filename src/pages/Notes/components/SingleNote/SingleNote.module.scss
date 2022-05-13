@@ -1,0 +1,23 @@
+
+.font-large {
+    font-family: var(--handwritten-font);
+    font-size: 2rem;
+}
+
+.font-small {
+    font-family: var(--handwritten-font);
+    font-size: 1.7rem;
+}
+
+.button {
+    background-color: rgb(158, 87, 87);
+    color: var(--bg-white);
+    height: 3.5rem;
+    border-radius: 40%;
+    border: none;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.button:hover {
+    cursor: pointer
+}

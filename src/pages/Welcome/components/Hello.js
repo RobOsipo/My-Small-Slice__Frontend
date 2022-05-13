@@ -1,6 +1,6 @@
 import React from 'react'
 import Logostache from '../../../icons/Logostache'
-import classes from './Hello.module.css'
+import classes from './Hello.module.scss'
 const Hello = () => {
   return (
     <div className={classes['hello-container']}>

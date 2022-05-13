@@ -1,0 +1,15 @@
+
+
+ 
+.card {
+    
+    background-color: var(--bg-white);
+    box-shadow: var(--dark-shadow-elevation-medium);
+    border-radius: 13px;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

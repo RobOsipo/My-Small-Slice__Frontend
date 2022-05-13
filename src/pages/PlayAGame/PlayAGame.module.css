@@ -1,87 +1,82 @@
-
-
-
-
 .main-container {
-    height: 200vh;
-    background-color: rgb(0, 0, 0);
-   
- }  
+  height: 200vh;
+  background-color: black;
+}
 
 .title {
-    font-family: 'Press Start 2p';
-    font-weight: 1000;
-    font-size: 2rem;
-    padding: 1rem;
-    color: var(--bg-white);
-    -webkit-text-stroke: 0.5px black; 
+  font-family: 'Press Start 2p';
+  font-weight: 1000;
+  font-size: 2rem;
+  padding: 1rem;
+  color: var(--bg-white);
+  -webkit-text-stroke: 0.5px black;
 }
 
 .game-container {
-   
-    height: 81vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  height: 81vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.start-btn{
+.start-btn {
   font-family: 'Press Start 2p';
   text-align: center;
   display: inline-block;
-  margin:5px;
+  margin: 5px;
   font-weight: bold;
   letter-spacing: 2px;
   padding: 10px 0 10px 10px;
   background-color: lightgray;
   text-shadow: -1px -1px black, 1px 1px white;
-  color: rgb(41, 41, 41);
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -o-border-radius: 7px;
+  color: #292929;
   border-radius: 7px;
-  box-shadow: 0 .2em gray; 
+  -webkit-box-shadow: 0 .2em gray;
+          box-shadow: 0 .2em gray;
   cursor: pointer;
-
 }
 
 .start-btn:active {
-	box-shadow: none;
-	position: relative;
-	top: .2em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  top: .2em;
 }
 
 .retro-button-container {
-  position: absolute; 
+  position: absolute;
   left: 10vw;
   top: 30vh;
 }
 
 .retro-buttons {
-	text-shadow: 1px 1px pink, -1px -1px maroon;
+  text-shadow: 1px 1px pink, -1px -1px maroon;
   font-family: 'Press Start 2p';
-	line-height: 1.5em;
-	text-align: center;
-	display: inline-block;
-	width: 2.5em;
-	-webkit-border-radius: .75em;
-	-moz-border-radius: .75em;
-	-o-border-radius: .75em;
-		border-radius: .75em;
-	background-color: red;
-	-webkit-box-shadow:  0 .2em maroon;
-	-moz-box-shadow:  0 .2em maroon;
-	-o-box-shadow:  0 .2em maroon;
-	box-shadow:  0 .2em maroon;
-	color: red;
-	margin: 5px;
-	background-color: red;
-	background-image: -o-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
-	background-image: -moz-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
-	background-image: -webkit-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
-	background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
-	cursor: pointer;
+  line-height: 1.5em;
+  text-align: center;
+  display: inline-block;
+  width: 2.5em;
+  border-radius: .75em;
+  background-color: red;
+  -webkit-box-shadow: 0 .2em maroon;
+  -o-box-shadow: 0 .2em maroon;
+  box-shadow: 0 .2em maroon;
+  color: red;
+  margin: 5px;
+  background-color: red;
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(3%, pink), color-stop(22%, red), color-stop(99%, maroon));
+  background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+  cursor: pointer;
   padding-left: 5px;
 }
 
@@ -108,8 +103,4 @@
   right: 0.5vw;
   top: 55vh;
 }
-
-
-
-
-
+/*# sourceMappingURL=PlayAGame.module.css.map */

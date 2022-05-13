@@ -9,7 +9,7 @@ import Choose from "../pages/Choose/Choose";
 import NoteContextProvider from "../context/note-context/NoteContextProvider";
 
 import cookie from "cookie";
-import "./App.css";
+import "./App.scss";
 
 export const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);

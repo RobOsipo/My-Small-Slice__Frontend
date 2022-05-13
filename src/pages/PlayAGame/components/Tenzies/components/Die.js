@@ -1,5 +1,5 @@
 import React from "react"
-import classes from './Die.module.css'
+import classes from './Die.module.scss'
 
 export default function Die(props) {
     const styles = {

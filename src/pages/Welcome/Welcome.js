@@ -3,7 +3,7 @@ import SimpleInput from '../../components/input/SimpleInput'
 import Hello from './components/Hello'
 import FormCard from '../../components/FormCard/FormCard'
 
-import classes from './Welcome.module.css'
+import classes from './Welcome.module.scss'
 const Welcome = () => {
   return (
       

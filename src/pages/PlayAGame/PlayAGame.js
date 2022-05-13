@@ -9,7 +9,7 @@ import Game from './components/TicTacToe/Game' // tic-tac-toe import
 import pacman from '../../localImages/retro2.jpg'
 import donkeykong from '../../localImages/retro3.jpg'
 import largepacman from '../../localImages/retro4.jpg'
-import classes from './PlayAGame.module.css'
+import classes from './PlayAGame.module.scss'
 const PlayAGame = () => {
   const [speedType, setSpeedType] = useState(false)
   const [playRps, setPlayRps] = useState(false)
@@ -50,24 +50,18 @@ const PlayAGame = () => {
     <section className={`${classes['main-container']}`}>
     <Header />
 
-    {/* <div className={classes['retro-button-container']}>
-      <span className={classes['retro-buttons']}>A</span>
-      <span className={classes['retro-buttons']}>B</span>
-    </div>
-
-    <img src={retroImage} alt="anything" className={classes['retro-image']} /> */}
 
 
       <section className={classes['game-container']}>
 
-      <div className={classes['retro-button-container']}>
-      <span className={classes['retro-buttons']}>A</span>
-      <span className={classes['retro-buttons']}>B</span>
-    </div>
+        <div className={classes['retro-button-container']}>
+          <span className={classes['retro-buttons']}>A</span>
+          <span className={classes['retro-buttons']}>B</span>
+        </div>
 
-    <img src={pacman} alt="anything" className={classes.pacman} />
-    <img src={donkeykong} alt="anything" className={classes['donkey-kong']} />
-    <img src={largepacman} alt="anything" className={classes['large-pacman']} />
+        <img src={pacman} alt="anything" className={classes.pacman} />
+        <img src={donkeykong} alt="anything" className={classes['donkey-kong']} />
+        <img src={largepacman} alt="anything" className={classes['large-pacman']} />
 
         <h1 className={classes.title}>Play Mini-Games</h1>
 

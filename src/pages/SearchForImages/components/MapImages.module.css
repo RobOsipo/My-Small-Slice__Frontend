@@ -1,41 +1,48 @@
-
 .container {
-    background-color: black;
-    color: var(--bg-white);
+  background-color: black;
+  color: var(--bg-white);
 }
 
 .images {
-    max-width: 500px;
-    max-height: 500px;
-    box-shadow: var(--shadow-elevation-medium)
+  max-width: 500px;
+  max-height: 500px;
+  -webkit-box-shadow: var(--shadow-elevation-medium);
+          box-shadow: var(--shadow-elevation-medium);
 }
 
 .loading {
-    text-align: center;
+  text-align: center;
 }
 
 .button {
-    color: white;
-    background-color: rgb(100, 100, 100);
+  color: white;
+  background-color: #646464;
 }
 
 .button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .span {
-    position: absolute;
-    margin: 8px;
-    background-color: black;
-    color: var(--bg-white);
-    height: 2rem;
-    width: 5rem;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  margin: 8px;
+  background-color: black;
+  color: var(--bg-white);
+  height: 2rem;
+  width: 5rem;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .innerSpan {
-    margin-left: 1rem;;
+  margin-left: 1rem;
 }
+/*# sourceMappingURL=MapImages.module.css.map */

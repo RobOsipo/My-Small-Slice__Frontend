@@ -1,52 +1,77 @@
-
-
-
 .title {
-    /* text-shadow: var(--txt-shadow-light); */
-    -webkit-text-stroke: 0.3px black; 
-    font-size: 2.5rem;
+  /* text-shadow: var(--txt-shadow-light); */
+  -webkit-text-stroke: 0.3px black;
+  font-size: 2.5rem;
 }
 
 .hello-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 50rem;
-    color: var(--font-color-reg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50rem;
+  color: var(--font-color-reg);
 }
+
 .display {
-    display: block;
+  display: block;
 }
+
 .display > h1 {
-   text-align: center;
+  text-align: center;
 }
 
 .bump-in {
-    animation: displayLogo 0.4s ease-out forwards;
+  -webkit-animation: displayLogo 0.4s ease-out forwards;
+          animation: displayLogo 0.4s ease-out forwards;
+}
+
+@-webkit-keyframes displayLogo {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @keyframes displayLogo {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(15%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
-
- 
-
-  /* .fade-in {
+/* .fade-in {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -77,3 +102,4 @@
      
     }
   } */
+/*# sourceMappingURL=Hello.module.css.map */

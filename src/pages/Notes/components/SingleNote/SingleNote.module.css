@@ -1,23 +1,24 @@
-
 .font-large {
-    font-family: var(--handwritten-font);
-    font-size: 2rem;
+  font-family: var(--handwritten-font);
+  font-size: 2rem;
 }
 
 .font-small {
-    font-family: var(--handwritten-font);
-    font-size: 1.7rem;
+  font-family: var(--handwritten-font);
+  font-size: 1.7rem;
 }
 
 .button {
-    background-color: rgb(158, 87, 87);
-    color: var(--bg-white);
-    height: 3.5rem;
-    border-radius: 40%;
-    border: none;
-    box-shadow: var(--shadow-elevation-low);
+  background-color: #9e5757;
+  color: var(--bg-white);
+  height: 3.5rem;
+  border-radius: 40%;
+  border: none;
+  -webkit-box-shadow: var(--shadow-elevation-low);
+          box-shadow: var(--shadow-elevation-low);
 }
 
 .button:hover {
-    cursor: pointer
+  cursor: pointer;
 }
+/*# sourceMappingURL=SingleNote.module.css.map */
