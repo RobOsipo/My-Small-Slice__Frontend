@@ -23,11 +23,12 @@
     padding: 10px 20px;
     text-transform: uppercase;
     cursor: pointer;
+    &:disabled {
+        cursor: not-allowed;
+    }
 }
 
-.button:disabled {
-    cursor: not-allowed;
-}
+
 
 .title {
     font-size: 20px;
@@ -43,8 +44,9 @@
     height: 200px;
     background: #00b800;
     padding: 10px;
+
+    &:disabled {
+        background-color: #a5a2a2;
+    }
 }
 
-.textarea:disabled {
-    background-color: #a5a2a2;
-}

@@ -44,13 +44,15 @@
   box-shadow: 0 .2em gray; 
   cursor: pointer;
 
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+  }
+
 }
 
-.start-btn:active {
-	box-shadow: none;
-	position: relative;
-	top: .2em;
-}
+
 
 .retro-button-container {
   position: absolute; 
